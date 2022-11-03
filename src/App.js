@@ -13,9 +13,15 @@ function App() {
     type: "",
   });
   return (
-    <div className="App">
-      <h3>Hello</h3>
-    </div>
+    <section className="section-center">
+      <div className="grocery-container">
+        <List />
+
+        <button type="button" className="clear-btn">
+          Clear
+        </button>
+      </div>
+    </section>
   );
 }
 
