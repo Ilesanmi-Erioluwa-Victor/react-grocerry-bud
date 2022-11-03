@@ -28,13 +28,14 @@ function App() {
     } else {
       const newItem = { id: new Date().getTime().toString(), itemName: name };
       setList([...list, newItem]);
+      showAlert(true, "Item, successfully added to list", "success");
       setName("");
     }
   };
   return (
     <section className="section-center">
       <form className="grocery-form" onSubmit={HandleSubmit}>
-        {alert.show && <Alert {...alert} />}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} />}
         <h3>Grocery Bud</h3>
 
         <div className="form-control">
