@@ -22,7 +22,12 @@ function App() {
         {alert.show && <Alert />}
         <h3>Grocery Bud</h3>
 
-        <div className="form-control"></div>
+        <div className="form-control">
+          <input type={"text"} />
+          <button type="submit" className="submit-btn">
+            {isEditing ? "Edit" : "Add"}
+          </button>
+        </div>
       </form>
 
       <div className="grocery-container">
