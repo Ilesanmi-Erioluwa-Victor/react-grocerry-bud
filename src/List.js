@@ -6,7 +6,22 @@ export const List = ({ item }) => {
     <div className="grocery-list">
       {item.map((item) => {
         const { id, newItem } = item;
-        return <article key={id}></article>;
+        return (
+          <article key={id} className="grocery-item">
+            <p className="title">{newItem}</p>
+
+            <div className="btn-container">
+              <button type="button" className="edit-btn">
+                {" "}
+                <FaEdit />
+              </button>
+              <button type="button" className="delete-btn">
+                {" "}
+                <FaTrash />
+              </button>
+            </div>
+          </article>
+        );
       })}
     </div>
   );
