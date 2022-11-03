@@ -12,13 +12,19 @@ function App() {
     msg: "",
     type: "",
   });
+
+  const HandleSubmit = (ev) => {
+    ev.preventDefault();
+  };
   return (
     <section className="section-center">
+      <form className="grocery-form" onSubmit={HandleSubmit}></form>
+
       <div className="grocery-container">
         <List />
 
         <button type="button" className="clear-btn">
-          Clear
+          Clear items
         </button>
       </div>
     </section>
