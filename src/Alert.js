@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Alert = () => {
-  return <div>Alert</div>;
+export const Alert = ({ type, msg }) => {
+  return <p className={`error error-${type}`}>{msg}</p>;
 };

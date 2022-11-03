@@ -8,8 +8,8 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
   const [alert, setAlert] = useState({
-    show: false,
-    msg: "",
+    show: true,
+    msg: "hiffds",
     type: "",
   });
 
@@ -27,7 +27,7 @@ function App() {
   return (
     <section className="section-center">
       <form className="grocery-form" onSubmit={HandleSubmit}>
-        {alert.show && <Alert />}
+        {alert.show && <Alert {...alert} />}
         <h3>Grocery Bud</h3>
 
         <div className="form-control">
