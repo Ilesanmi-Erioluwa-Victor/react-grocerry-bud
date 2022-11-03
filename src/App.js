@@ -18,7 +18,12 @@ function App() {
   };
   return (
     <section className="section-center">
-      <form className="grocery-form" onSubmit={HandleSubmit}></form>
+      <form className="grocery-form" onSubmit={HandleSubmit}>
+        {alert.show && <Alert />}
+        <h3>Grocery Bud</h3>
+
+        <div className="form-control"></div>
+      </form>
 
       <div className="grocery-container">
         <List />
