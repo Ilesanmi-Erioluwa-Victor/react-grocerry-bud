@@ -46,7 +46,7 @@ function App() {
     const SpecificId = list.find((item) => item.id === id);
     setIsEditing(true);
     setEditId(id);
-    setName(SpecificId.title);
+    setName(SpecificId.itemName);
   };
 
   return (
@@ -71,7 +71,7 @@ function App() {
 
       {list.length > 0 && (
         <div className="grocery-container">
-          <List item={list} removeItem={removeItem} />
+          <List item={list} removeItem={removeItem} editItem={editItem} />
 
           <button type="button" className="clear-btn" onClick={clearList}>
             Clear items
