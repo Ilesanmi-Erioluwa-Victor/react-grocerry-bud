@@ -8,15 +8,22 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
   const [alert, setAlert] = useState({
-    show: true,
-    msg: "hiffds",
+    show: false,
+    msg: "",
     type: "",
   });
+
+  // Function for setAlert
+  const showAlert = (show = false, msg = "", type = "") => {
+    return setAlert({ show, msg, type });
+  };
 
   const HandleSubmit = (ev) => {
     ev.preventDefault();
 
     if (!name) {
+      // display  danger alert using showAlert function below..
+      showAlert(true, "Please enter valid nme", "danger");
     } else if (name && isEditing) {
     } else {
       const newItem = { id: new Date().getTime().toString(), itemName: name };
