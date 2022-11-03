@@ -23,7 +23,13 @@ function App() {
         <h3>Grocery Bud</h3>
 
         <div className="form-control">
-          <input type={"text"} />
+          <input
+            type={"text"}
+            className="grocery"
+            placeholder="enter your grocery item"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <button type="submit" className="submit-btn">
             {isEditing ? "Edit" : "Add"}
           </button>
