@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Alert } from "./Alert";
+import { List } from "./List";
 
 function App() {
   const [name, setName] = useState("");
