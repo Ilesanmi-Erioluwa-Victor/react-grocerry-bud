@@ -25,6 +25,16 @@ function App() {
       // display  danger alert using showAlert function below..
       showAlert(true, "Please enter valid nme", "danger");
     } else if (name && isEditing) {
+      setList(
+        list.map((item) => {
+          // check if this id match editId, if yes, Change the name..
+          if (item.id === editId) {
+            return { ...item, itemName: name };
+          }
+
+          return item;
+        })
+      );
     } else {
       const newItem = { id: new Date().getTime().toString(), itemName: name };
       setList([...list, newItem]);
