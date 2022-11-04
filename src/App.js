@@ -35,6 +35,10 @@ function App() {
           return item;
         })
       );
+      setName("");
+      setEditId(null);
+      setIsEditing(false);
+      showAlert(true, "Item, successfully edited", "success");
     } else {
       const newItem = { id: new Date().getTime().toString(), itemName: name };
       setList([...list, newItem]);
