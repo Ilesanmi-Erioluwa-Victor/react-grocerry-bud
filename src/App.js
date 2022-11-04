@@ -63,6 +63,11 @@ function App() {
     setName(SpecificId.itemName);
   };
 
+  // For local Storage
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(list));
+  }, [list]);
+
   return (
     <section className="section-center">
       <form className="grocery-form" onSubmit={HandleSubmit}>
